@@ -15,6 +15,11 @@ docker pull stacksimplify/dockerintro-springboot-helloworld-rest-api:1.0.0-RELEA
 - Copy the docker image name from Docker Hub
 ```
 docker run --name app1 -p 80:8080 -d stacksimplify/dockerintro-springboot-helloworld-rest-api:1.0.0-RELEASE
+
+UPDATE junio 23!!!
+add:  --ulimit nofile=122880:122880 -m 3G
+
+docker run --name app1 --ulimit nofile=122880:122880 -m 3G -p 80:8080 -d stacksimplify/dockerintro-springboot-helloworld-rest-api:1.0.0-RELEASE
 http://localhost/hello
 
 # For Mac with Apple Chips (use different application)
